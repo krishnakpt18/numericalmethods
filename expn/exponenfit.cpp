@@ -46,9 +46,9 @@ int main ()
 
   denom=n*sumx2-sumx*sumx;
   suma=n*sumxy-sumx*sumY;
-  sumb=sumx2*sumY-sumY*sumx;
+  sumb=sumx2*sumY-sumxy*sumx;
   a=suma/denom; b=sumb/denom;
-  //B=exp(b);
+  B=exp(b);
 
   fout<<"# "<<setw(15)<<"a="<<a<<setw(25)<<"b="<<b<<endl;
   fout<<"# "<<string(70,'-')<<endl;
@@ -57,12 +57,14 @@ int main ()
   
   for ( i = 0; i < n; i++) {
     ax=a*x[i];
-    yfit[i]=b*(exp(ax));
-    fout<<setw(10)<<x[i]<<setw(10)<<y[i]<<setw(10)<<z[i]<<setw(10)<<yfit[i]<<endl;  
-  }
-  
-  fout<<"# "<<string(70,'-')<<endl;
+    yfit[i]=B*(exp(ax));
+    fout<<setw(10)<<x[i]<<setw(10)<<y[i]<<setw(10)<<z[i]<<setw(10)<<yfit[i]<<endl;
 
+
+
+  }
+
+  fout<<"# "<<string(70,'-')<<endl;
   delete [] x;
   delete [] y;
   delete [] yfit;
