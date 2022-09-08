@@ -12,7 +12,7 @@ int main ()
   double x2,xy;
   ifstream fin;
   ofstream fout;
-  fin.open("inexp.txt");
+  fin.open("in.txt");
   fout.open("outexp.txt");
   fin>>n;
   fout<<setiosflags(ios::fixed | ios::showpoint)<<setprecision(5);
@@ -50,7 +50,7 @@ int main ()
   a=suma/denom; b=sumb/denom;
   B=exp(b);
 
-  fout<<"# "<<setw(15)<<"a="<<a<<setw(25)<<"b="<<b<<endl;
+  fout<<"# "<<setw(10)<<"a="<<a<<setw(15)<<"b="<<b<<setw(10)<<"B="<<B<<endl;
   fout<<"# "<<string(70,'-')<<endl;
   fout<<"# "<<setw(10)<<"x"<<setw(10)<<"y"<<setw(10)<<"Y"<<setw(10)<<"yfit"<<endl;
   fout<<"# "<<string(70,'-')<<endl;
