@@ -29,7 +29,7 @@ double real_roots(double x){
   fout<<'#'<<setw(5)<<'x'<<setw(15)<<"fx"<<setw(17)<<"fpx"<<endl;
   fout<<'#'<<string(60,'-')<<endl;
 
-  for (int i = 0; i < 21; i++) {
+  for (int i = 0; i < 51; i++) {
     x2 = x * x;
     x3 = x * x2;
     x4 = x * x3;
