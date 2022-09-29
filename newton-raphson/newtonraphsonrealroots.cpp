@@ -34,9 +34,10 @@ double real_roots(double x){
     x3 = x * x2;
     x4 = x * x3;
     x5 = x * x4;
-    fx = x3 + x2 * 6.0 + x * 11.0 + 6.0;
-    fpx = x2 * 3.0 + x * 12.0 + 11.0;
-    
+//    fx = x3 + x2 * 6.0 + x * 11.0 + 6.0;
+  //  fpx = x2 * 3.0 + x * 12.0 + 11.0;
+    fx=0.5-(exp(-x/5));
+    fpx=exp(-x/5);
     eps=fx/fpx;
     x -= eps;
 
